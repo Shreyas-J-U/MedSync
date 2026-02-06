@@ -1,0 +1,82 @@
+medsync/
+├── client/                                # React frontend
+│   ├── public/
+│   │   └── index.html
+│   ├── src/
+│   │   ├── assets/                        # Images, logos, icons
+│   │   │   └── logo.png
+│   │   ├── components/                   # Reusable UI components
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   ├── CalendarView.jsx          # FullCalendar integration
+│   │   │   ├── ReminderCard.jsx
+│   │   │   └── UploadPrescription.jsx
+│   │   ├── pages/                        # Page-level views
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── Dashboard.jsx             # Role-based (Patient, Doctor, Admin)
+│   │   │   ├── BookAppointment.jsx
+│   │   │   ├── MyAppointments.jsx
+│   │   │   └── Prescriptions.jsx
+│   │   ├── services/                     # Axios API calls
+│   │   │   ├── authService.js
+│   │   │   ├── appointmentService.js
+│   │   │   ├── prescriptionService.js
+│   │   │   └── userService.js
+│   │   ├── context/                      # Global state
+│   │   │   ├── AuthContext.jsx
+│   │   │   └── RoleContext.jsx
+│   │   ├── utils/                        # Helpers (dates, validators)
+│   │   │   ├── formatDate.js
+│   │   │   └── token.js
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   └── vite.config.js
+│
+├── server/                                # Node.js backend
+│   ├── config/
+│   │   ├── db.js                         # DB connection (Postgres/Mongo)
+│   │   └── cloudinary.js                # Cloudinary setup (for prescriptions)
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── appointmentController.js
+│   │   ├── userController.js
+│   │   ├── prescriptionController.js
+│   │   └── reminderController.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Appointment.js
+│   │   ├── Prescription.js
+│   │   └── DoctorAvailability.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── appointmentRoutes.js
+│   │   ├── userRoutes.js
+│   │   ├── prescriptionRoutes.js
+│   │   └── chatbotRoutes.js              # (Optional)
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   ├── uploadMiddleware.js
+│   │   └── errorHandler.js
+│   ├── utils/
+│   │   ├── sendSMS.js                    # Twilio
+│   │   ├── sendEmail.js                  # SendGrid
+│   │   ├── scheduler.js                  # Cron jobs
+│   │   └── generateToken.js              # JWT
+│   ├── chatbot/
+│   │   └── dialogflow.js                 # Optional GPT/Dialogflow logic
+│   ├── uploads/                          # Local fallback for prescription files
+│   ├── .env
+│   ├── server.js                         # Entry point
+│   ├── package.json
+│   └── README.md
+│
+├── .gitignore
+└── README.md
+
+
+
+Twilio recovery=BT9WRMGL71C2QAMGM64NCPDB
